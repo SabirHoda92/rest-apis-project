@@ -34,9 +34,7 @@ def create_app(db_url=None):
     db.init_app(app)
     migrate = Migrate(app, db)
     api = Api(app)
-
-    if __name__ == "__main__":
-        app.run()
+    
                                  #"jose" This secret code is not safe do like this
     app.config["JWT_SECRET_KEY"] = "jose"
     jwt = JWTManager(app)
