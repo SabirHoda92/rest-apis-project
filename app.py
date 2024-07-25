@@ -33,7 +33,7 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app)
     migrate = Migrate(app, db)
-    api = Api(app
+    api = Api(app)
 
     if __name__ == "__main__":
         app.run()
